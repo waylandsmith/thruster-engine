@@ -1,25 +1,27 @@
 // test.js
 
+// initial stuff
+
+function init(){
+	setInterval(draw,33); // could use window.requestAnimationFrame
+	setTimeout(draw,33); // not sure what this does
+	}
+
 // canvas //
 var canv=document.getElementById("game_canvas");
 var ctx=canv.getContext("2d");
 ctx.fillStyle="#123456";
-// ctx.globalCompositeOperation = 'destination-over'; // idk what this does, should look it up
 
+// ctx.globalCompositeOperation = 'destination-over'; // idk what this does, should look it up+
 // canvas //
-
 // frames //
+
 // the real challenge of Canvas has been the lack of frames and fundamentally static quality of the system
 // but we can change that now!  Implementing our own frames is step number 1 of building an engine
-
-//function draw(){}
-//   var canv=document.getElementById("game_canvas");
-//   var ctx=canv.getContext("2d");
 
 function refreshFrame(){
       ctx.clearRect(0,0,480,360);
 }
-
 // we'll want eventListeners for input
 
 // frames //
@@ -49,7 +51,12 @@ function killimg(){
    ctx.fillRect(0,0,50,50);
    }
 
-//
+
+// draw function //
+
+function draw(){
+	refreshFrame()
+}
 
 /*
 var cv=document.getElementById("game_canvas");
