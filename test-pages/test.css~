@@ -2,6 +2,10 @@ body{
    background-color: blue;
 }
 
-.game_canvas{
+#game_canvas{
    background-color: green;
+}
+
+#hiddensection{
+   display:none;
 }
