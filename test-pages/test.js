@@ -5,7 +5,11 @@
 function init(){
 	setInterval(draw,33); // could use window.requestAnimationFrame
 	setTimeout(draw,33); // not sure what this does
+	newAnimation(3, 'Billy');
 	}
+var sprites = new Array();
+var count = 0;
+var stage = 0;
 
 // canvas //
 var canv=document.getElementById("game_canvas");
@@ -55,8 +59,45 @@ function killimg(){
 // draw function //
 
 function draw(){
-	refreshFrame()
+	refreshFrame();
+	drawSprites();
+	
+	count = count + 1;
+	if (count >= 30) {
+		if (stage == 2) {
+			stage = 0;
+		}
+		else {
+			stage = stage + 1;
+		}
+	count = 0;
+	}
 }
+
+
+
+
+
+function newAnimation(numSprites, name) {
+	var i = 0;
+	while (i < numSprites) {
+		sprites[i] = new Image();
+		sprites[i].src = name + (i+1) + '.png';
+		i = i + 1;
+		console.log("newAnimation");
+		console.log(numSprites);
+	}
+}
+
+function drawSprites() {
+	var i = 0;
+	while (i<sprites.length) {
+		ctx.drawImage(sprites[stage], 0, 0);
+		i = i + 1;
+		console.log("drawSprites");
+	}
+}
+
 
 /*
 var cv=document.getElementById("game_canvas");
