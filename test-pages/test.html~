@@ -10,12 +10,18 @@
    </canvas>
 
 <section id="hidden_content"> 
-   <img src="prog-art1.svg" />
-</section>
+    <img src="prog-art1.svg" />
+   
+	<img id="Plane1" src="Plane1.png" alt="Test Img" width="480" height="300">
+	<img id="Plane2" src="Plane2.png" alt="Test Img" width="480" height="300">
+	<img id="Plane3" src="Plane3.png" alt="Test Img" width="480" height="300">
+	</section>
 
 <script type="application/javascript" src="test.js"></script>
 
 <button onclick="showimg()">Create a box!</button>
 <button onclick="killimg()">Kill a box!</button>
+<button onclick="refreshFrame()">Refresh the frame</button>
+<button onclick="init()">Start the game</button>
 </body>
 </html>

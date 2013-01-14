@@ -5,7 +5,7 @@
 function init(){
 	setInterval(draw,33); // could use window.requestAnimationFrame
 	setTimeout(draw,33); // not sure what this does
-	newAnimation(3, 'Billy');
+	newAnimation(3, 'plane');
 	}
 var sprites = new Array();
 var count = 0;
