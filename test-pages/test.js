@@ -39,6 +39,7 @@ borg_cube.onload = function(){
 borg_cube.src = 'prog-art1.svg';
 
 
+
 // image //
 // functions
 // create image
@@ -74,9 +75,7 @@ function draw(){
 	}
 }
 
-
-
-
+// Sprite Animation
 
 function newAnimation(numSprites, name) {
 	var i = 0;
@@ -98,6 +97,100 @@ function drawSprites() {
 	}
 }
 
+// Game Objects //
+// these assume players have one primary character.
+
+// we'll 'define' a few constructors (essentially, classes)
+
+function Animal(controller) {
+    // animals interact with the world and move
+    // controller:  is the animal controlled by the computer, or the player?
+    }; 
+// prototypal stuff here    
+function Vegetable() {
+    // vegetables can be interacted with and moved, but don't do so themselves
+    }; 
+// prototypal stuff here    
+function Mineral() {
+    // minerals cannot be interacted with and have no physical properties
+    }; 
+// prototypal stuff here
+
+
+
+// motion //
+
+function teleport(subject,dest) {
+    /* this 'teleports' - moves w/out physics.  It has just two arguments - the thing teleporting, and the target.
+    * dest should be an array with [x,y].
+    * teleport could also be called by other move functions as a lower-level component */
+    subject.x = dest[0];
+    subject.y = dest[1]; // on redraw the subject should appear with a new XY
+    }
+
+function vee(){}
+
+function move(subject,t,vee,deltav){
+    if (!vee) var vee = 0; // wait....vee should be a function
+    if (!deltav) var deltav = 0; // should add something for friction or air resistance?  later.
+    // for i in t, vee = vee + deltav
+    vee = vee + (deltav * t)
+    }
+
+// Controls
+/*
+ * 
+function ctrlMv(){
+    function kdRight(evt,key){
+        switch (evt.keyCode){
+            console.log(keydown);
+            }
+        return "right"
+        }
+
+    function kdLeft(evt,key){
+        switch (evt.keyCode){
+            console.log(keydown);
+            }
+        return "left"
+        }
+	
+    function kdUp(evt,key){
+        switch (evt.keyCode){
+            console.log(keydown);
+            }
+        return "up"
+        }
+	
+    function kdDown(evt,key){
+        switch (evt.keyCode){
+            console.log(keydown);
+            }
+        return "down"
+        }
+    }
+
+*/
+window.addEventListener('keydown','KeyDown');
+
+function kd(evt){
+//    if (evt.keycode)
+    }
+
+function ctrls(gametype) {
+    switch(gametype) {
+        case "shooter":
+        
+        }
+
+
+// Gametype
+
+// Shooter
+
+
+
+// Gametype
 
 /*
 var cv=document.getElementById("game_canvas");
