@@ -115,8 +115,8 @@ function Mineral() {
     }; 
 // prototypal stuff here
 
-var CoderArt = { name : "foo", x : 0, y : 0, src : '' };
-CoderArt.src=''
+// var CoderArt = { name : "foo", x : 0, y : 0, src : '' };
+// CoderArt.src=''
 
 // motion //
 
@@ -171,7 +171,7 @@ function ctrlMv(){
     }
 
 */
-window.addEventListener('keydown','KeyDown');
+// window.addEventListener('keydown','KeyDown');
 
 function kd(evt){
 //    if (evt.keycode)

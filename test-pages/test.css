@@ -1,11 +1,12 @@
 body{
-   background-color: blue;
+    background-color: blue;
+    text-align: center;
 }
 
 #game_canvas{
-   background-color: green;
+    background-color: white;
 }
 
 #hidden_content{
-   display:none;
+    display:none;
 }
