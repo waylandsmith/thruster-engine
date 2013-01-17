@@ -5,7 +5,7 @@
 function init(){
 	setInterval(draw,33); // could use window.requestAnimationFrame
 	setTimeout(draw,33); // not sure what this does
-	newAnimation(3, 'Plane');
+	newAnimation(3, 'plane');
 	}
 var sprites = new Array();
 var count = 0;
@@ -74,9 +74,7 @@ function draw(){
 	}
 }
 
-
-
-
+// Sprite Animation
 
 function newAnimation(numSprites, name) {
 	var i = 0;
@@ -98,6 +96,40 @@ function drawSprites() {
 	}
 }
 
+// Controls
+
+function kdRight(evt,key){
+	switch (evt.keyCode){
+		console.log(keydown);
+		}
+	}
+
+function kdLeft(evt,key){
+	
+	}
+	
+function kdUp(evt,key){
+	
+	}
+	
+function kdDown(evt,key){
+	
+	}
+
+function ctrls(gametype) {
+	if(gametype == "shooter") {
+			pass;
+	}else{pass;}
+	}
+
+
+// Gametype
+
+// Shooter
+
+
+
+// Gametype
 
 /*
 var cv=document.getElementById("game_canvas");
