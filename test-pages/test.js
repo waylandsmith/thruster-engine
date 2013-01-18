@@ -177,9 +177,22 @@ function kd(evt){
 //    if (evt.keycode)
     }
 
+function kdb(k){
+    switch (k) {
+        case right:
+            alert("right");
+            // needs to return something to the game
+            break;
+        case left:
+            alert("left");
+            // needs to return something to the game
+            break;
+        }
+    }
+
 function ctrls(gametype) {
     switch(gametype) {
-        case "shooter":
+//        case "shooter":
         
         }
     }
