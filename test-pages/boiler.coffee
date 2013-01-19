@@ -4,8 +4,8 @@
 
 init = ->
     `
-    setInterval(draw,33); // could use window.requestAnimationFrame
-	setTimeout(draw,33); // not sure what this does
+    setInterval(draw,33); // could use window.requestAnimationFrame, but this seems to be less browser-specific
+    setTimeout(draw,33);
 	`
 sprites = []
 countr = 0
