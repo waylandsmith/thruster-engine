@@ -1,5 +1,4 @@
 // test.js
-
 // initial stuff
 
 function init(){
@@ -127,7 +126,14 @@ function teleport(subject,dest) {
     subject.x = dest[0];
     subject.y = dest[1]; // on redraw the subject should appear with a new XY
     }
-
+/*
+function teleglide(subject,dir,t){
+    // gradually moves
+    done = false;
+    while !done{
+        }
+    }
+*/
 function vee(){}
 
 function move(subject,t,vee,deltav){
@@ -138,46 +144,14 @@ function move(subject,t,vee,deltav){
     }
 
 // Controls
-/*
- * 
-function ctrlMv(){
-    function kdRight(evt,key){
-        switch (evt.keyCode){
-            console.log(keydown);
-            }
-        return "right"
-        }
 
-    function kdLeft(evt,key){
-        switch (evt.keyCode){
-            console.log(keydown);
-            }
-        return "left"
-        }
-	
-    function kdUp(evt,key){
-        switch (evt.keyCode){
-            console.log(keydown);
-            }
-        return "up"
-        }
-	
-    function kdDown(evt,key){
-        switch (evt.keyCode){
-            console.log(keydown);
-            }
-        return "down"
-        }
-    }
-
-*/
 // window.addEventListener('keydown','KeyDown');
 
-function kd(evt){
+function kd(evt){ // keyboard controls
 //    if (evt.keycode)
     }
 
-function kdb(k){
+function kdb(k){ // button controls
     switch (k) {
         case right:
             alert("right");
@@ -196,12 +170,11 @@ function ctrls(gametype) {
         
         }
     }
-
-
 // Gametype
-
 // Shooter
-
-
-
 // Gametype
+
+// GAME //
+
+
+// GAME //
