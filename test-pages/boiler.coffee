@@ -11,19 +11,19 @@ init = ->
 sprites = []
 countr = 0
 stage = 0
-canv = `document.getElementById("game_canvas");`
+canv = document.getElementById("game_canvas")
 ctx = canv.getContext("2d")
-ctx.fillStyle="#ABCDEF"
+ctx.fillStyle = "blue"
 
 draw = -> # this needs to do more than just refresh
     ctx.clearRect(0,0,480,360)
     drawSprites
-    countr ++
+    countr = countr + 1
     if countr >= 30
         if stage == 2
             stage = 0
         else
-            stage ++
+            stage = stage + 1
     countr = 0
 
 newAnimation = (numSprites, name) ->
@@ -31,14 +31,14 @@ newAnimation = (numSprites, name) ->
     while i < numSprites
         sprites[i] = new Image
         sprites[i].src = name + (i + 1) + ".png"
-        i ++
+        i = i + 1
 
 drawSprites = ->
 # this function needs to accept a "location" argument
     i = 0
     while i < sprites.length
         ctx.drawImage(sprites[stage], 0, 0)
-        i ++
+        i = i + 1
 
 
 # movement

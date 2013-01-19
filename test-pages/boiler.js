@@ -1,12 +1,68 @@
-
-/* problem - Coffee returns one value by default, doesn't yet know that Subject is an object and Dest an array
-teleport = (subject,dest) ->
-    subject.x = dest[0]
-    subject.y = dest[1]
-*/
-
 (function() {
-  var controlButtons;
+  var canv, controlButtons, countr, ctx, draw, drawSprites, init, newAnimation, sprites, stage;
+
+  init = function() {
+    return 
+    setInterval(draw,33); // could use window.requestAnimationFrame
+	setTimeout(draw,33); // not sure what this does
+	newAnimation(3, 'plane');
+	;
+  };
+
+  sprites = [];
+
+  countr = 0;
+
+  stage = 0;
+
+  canv = document.getElementById("game_canvas");
+
+  ctx = canv.getContext("2d");
+
+  ctx.fillStyle = "blue";
+
+  draw = function() {
+    ctx.clearRect(0, 0, 480, 360);
+    drawSprites;
+    countr = countr + 1;
+    if (countr >= 30) {
+      if (stage === 2) {
+        stage = 0;
+      } else {
+        stage = stage + 1;
+      }
+    }
+    return countr = 0;
+  };
+
+  newAnimation = function(numSprites, name) {
+    var i, _results;
+    i = 0;
+    _results = [];
+    while (i < numSprites) {
+      sprites[i] = new Image;
+      sprites[i].src = name + (i + 1) + ".png";
+      _results.push(i = i + 1);
+    }
+    return _results;
+  };
+
+  drawSprites = function() {
+    var i, _results;
+    i = 0;
+    _results = [];
+    while (i < sprites.length) {
+      ctx.drawImage(sprites[stage], 0, 0);
+      _results.push(i = i + 1);
+    }
+    return _results;
+  };
+
+  /* problem - Coffee returns one value by default, doesn't yet know that Subject is an object and Dest an array
+  teleport = (subject,dest) ->
+      subject.x = dest[0]
+      subject.y = dest[1]
+  */
 
   controlButtons = function(k) {
     if (k === right) {
