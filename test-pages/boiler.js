@@ -1,11 +1,10 @@
 (function() {
-  var canv, controlButtons, countr, ctx, draw, drawSprites, init, newAnimation, sprites, stage;
+  var buttoncontrol, canv, countr, ctx, draw, drawSprites, init, newAnimation, sprites, stage;
 
   init = function() {
     return 
     setInterval(draw,33); // could use window.requestAnimationFrame
 	setTimeout(draw,33); // not sure what this does
-	newAnimation(3, 'plane');
 	;
   };
 
@@ -64,7 +63,7 @@
       subject.y = dest[1]
   */
 
-  controlButtons = function(k) {
+  buttoncontrol = function(k) {
     if (k === right) {
       return alert("right");
     } else if (k === left) {
@@ -78,7 +77,7 @@
   Copyright 2013 Matthew Meneghini
   Copyright 2013 Edward Pantridge
   
-  This is our CoffeeScript port of the Thruster Engine, called Boiler.
+  This is our CoffeeScript port of the Thruster Engine, now called Boiler.
   
    * Redistribution and use in source and binary forms, with or without
    * modification, are permitted provided that the following conditions are

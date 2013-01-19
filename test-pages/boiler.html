@@ -7,6 +7,7 @@
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 0.21" />
     <link rel="stylesheet" href="test.css" />
+
 </head>
 <body>
     <canvas id="game_canvas" width=480 height=360 onKeyDown="kd()"></canvas>
@@ -25,15 +26,15 @@
     
     <section id="io">
         <button id="start">Start the game!</button>
-        <button id="left" onclick="kdb(left)">Left</button>
-        <button id="right" onclick="kdb(right)">Right</button>
+        <button id="left" onclick="buttoncontrol(left)">Left</button>
+        <button id="right" onclick="buttoncontrol(right)">Right</button>
         <button id="attack">Attack</button>
 <!--        this boilerplate code controls our input events.  There is no simple and portable keyboard input system 
     (that is, different browsers handle keyboard input differently) in the DOM.  For portable and professional games,
     outsiders may want to use jQuery or a similar method for input.-->
     </section>
+    
     <script type="application/javascript" src="boiler.js"></script>
-
 </body>
 
 <!-- Copyright 2013 Matthew Meneghini

@@ -6,7 +6,6 @@ init = ->
     `
     setInterval(draw,33); // could use window.requestAnimationFrame
 	setTimeout(draw,33); // not sure what this does
-	newAnimation(3, 'plane');
 	`
 sprites = []
 countr = 0
@@ -50,7 +49,7 @@ teleport = (subject,dest) ->
 ###
 
 # controls
-controlButtons = (k) ->
+buttoncontrol = (k) ->
     if k == right
         alert "right"
     else if k == left
@@ -62,7 +61,7 @@ controlButtons = (k) ->
 Copyright 2013 Matthew Meneghini
 Copyright 2013 Edward Pantridge
 
-This is our CoffeeScript port of the Thruster Engine, called Boiler.
+This is our CoffeeScript port of the Thruster Engine, now called Boiler.
 
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
