@@ -1,12 +1,8 @@
-# matt messing around with CoffeeScript
-
-# let's rewrite the test.js file in CoffeeS
-
 init = ->
     `
     setInterval(draw,33); // could use window.requestAnimationFrame, but this seems to be less browser-specific
-    setTimeout(draw,33);
-	`
+    setTimeout(draw,33);`
+    
 sprites = []
 countr = 0
 stage = 0
